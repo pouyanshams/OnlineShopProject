@@ -53,7 +53,7 @@ public class SignupMenu implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==signupButton)
         {
-            if (Customer.isThereAnyCustomer(usernameTxt.getText(), passwordTxt.getText())) {
+            if (Customer.isThereAnyCustomerUsername(usernameTxt.getText())) {
                 System.out.println("this username has been taken");
             } else  {
                 Customer customer  = new Customer(usernameTxt.getText(), passwordTxt.getText());

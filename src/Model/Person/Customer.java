@@ -34,6 +34,18 @@ public class Customer {
         return false;
     }
 
+    public static boolean isThereAnyCustomerUsername(String username)
+    {
+        for (int i=0;i< allCustomers.size();i++)
+        {
+            if(allCustomers.get(i).username.equals(username))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void customerInfo(String username) {
 
         for (int i = 0; i < allCustomers.size(); i++) {

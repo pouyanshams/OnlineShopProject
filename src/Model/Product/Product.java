@@ -60,7 +60,7 @@ public class Product {
         {
             System.out.println("PRODUCT NUMBER: "+ (i+1));
             System.out.println("PRODUCT NAME: " + allProducts.get(i).name);
-            System.out.println("PRODUCT PRICE : " + allProducts.get(i).price);
+            System.out.println("PRODUCT PRICE : " + allProducts.get(i).price + "$");
             System.out.println("PRODUCT INVENTORY : " + allProducts.get(i).inventory);
             System.out.println("PRODUCT DESCRIPTION : " + allProducts.get(i).productDescription);
             System.out.println("***************************************************************");
