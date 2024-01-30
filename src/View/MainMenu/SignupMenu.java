@@ -31,14 +31,6 @@ public class SignupMenu implements ActionListener {
         usernameTxt.setPreferredSize(new Dimension(100,20));
         passwordTxt.setPreferredSize(new Dimension(100,20));
 
-
-
-
-
-
-
-
-
         //show frame
         signupFrame.add(usernameTxt);
         signupFrame.add(passwordTxt);

@@ -1,7 +1,5 @@
 package View.MainMenu;
 
-import View.Manager.ManagerMenu;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -54,7 +52,7 @@ public class MainMenu implements ActionListener {
         }
         else if (e.getSource() == loginAsManager) {
             frame.dispose();
-            new ManagerMenu();
+            new ManagerLoginFrame();
         }
     }
 }
