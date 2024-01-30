@@ -48,6 +48,7 @@ public class Customer {
 
     public static void customerInfo(String username) {
 
+
         for (int i = 0; i < allCustomers.size(); i++) {
             if (allCustomers.get(i).username.equals(username)) {
 
@@ -55,7 +56,13 @@ public class Customer {
                 System.out.println("Your username is " + allCustomers.get(i).username);
                 System.out.println("your password is " + allCustomers.get(i).password);
                 System.out.println("your balance is : " + allCustomers.get(i).cart.balance + "$");
-                System.out.println("Owned Items : " + ShoppingList.allShoppinglist.get(i).purchasedItems);
+                System.out.println("Your Purchased Goods :");
+                for (int k=0;k<ShoppingList.allShoppinglist.get(i).purchasedItems.size();k++)
+                {
+                    System.out.print( ShoppingList.allShoppinglist.get(i).purchasedItems.get(k) + "  ");
+                }
+                System.out.println();
+
             }
         }
     }

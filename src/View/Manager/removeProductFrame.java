@@ -8,14 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class removeProductFrame implements ActionListener {
-    JFrame purchaseFrame = new JFrame();
+    JFrame removeProductFrame = new JFrame();
     JButton managerMenu = new JButton("Manager Menu");
     JButton removeProductButton = new JButton("Remove Product");
     JTextField productName = new JTextField();
 
     public removeProductFrame() {
-        purchaseFrame.setSize(420, 420);
-        purchaseFrame.setLayout(new FlowLayout());
+        removeProductFrame.setSize(420, 420);
+        removeProductFrame.setLayout(new FlowLayout());
         managerMenu.addActionListener(this);
         removeProductButton.addActionListener(this);
 
@@ -23,29 +23,34 @@ public class removeProductFrame implements ActionListener {
 
 
         //show frame
-        purchaseFrame.add(productName);
-        purchaseFrame.add(managerMenu);
-        purchaseFrame.add(removeProductButton);
-        purchaseFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        purchaseFrame.setVisible(true);
+        removeProductFrame.add(productName);
+        removeProductFrame.add(managerMenu);
+        removeProductFrame.add(removeProductButton);
+        removeProductFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        removeProductFrame.setVisible(true);
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == managerMenu) {
-            purchaseFrame.dispose();
+            removeProductFrame.dispose();
             new ManagerMenu();
         }
         else if (e.getSource() == removeProductButton)
         {
             if (Product.isThereAnyProduct(productName.getText())) {
                 Product.removeProduct(productName.getText());
-            } else {
-
-                System.out.println("hamchin kalayi vojod nadarad");
+                System.out.println("The Item Has Been Removed");
             }
+            else {
+
+                System.out.println("There Is No Product With That Name");
+            }
+
         }
+            removeProductFrame.dispose();
+            new ManagerMenu();
 
     }
 }

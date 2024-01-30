@@ -20,7 +20,6 @@ public class ManagerMenu implements ActionListener {
 
     JButton inventory = new JButton("Inventory");
 
-    JButton customerInfo = new JButton("ManagerInfo");
 
     JButton MainMenu = new JButton("Main Menu");
 
@@ -29,29 +28,24 @@ public class ManagerMenu implements ActionListener {
         frame.setSize(420, 420);
         frame.setLayout(null);
 
-        addProduct.setBounds(100, 10, 200,40 );
+        addProduct.setBounds(100, 40, 200,40 );
         addProduct.setVisible(true);
         addProduct.addActionListener(this);
 
-        removeProduct.setBounds(100, 70, 200,40 );
+        removeProduct.setBounds(100, 100, 200,40 );
         removeProduct.setVisible(true);
         removeProduct.addActionListener(this);
 
-        store.setBounds(100, 130, 200,40 );
+        store.setBounds(100, 160, 200,40 );
         store.setVisible(true);
         store.addActionListener(this);
 
 
-
-
-        inventory.setBounds(100, 190, 200,40 );
+        inventory.setBounds(100, 220, 200,40 );
         inventory.setVisible(true);
         inventory.addActionListener(this);
-        customerInfo.setBounds(100, 250, 200,40 );
-        customerInfo.setVisible(true);
-        customerInfo.addActionListener(this);
 
-        MainMenu.setBounds(100, 310, 200,40 );
+        MainMenu.setBounds(100, 280, 200,40 );
         MainMenu.setVisible(true);
         MainMenu.addActionListener(this);
 
@@ -62,7 +56,6 @@ public class ManagerMenu implements ActionListener {
         frame.add(removeProduct);
         frame.add(addProduct);
         frame.add(inventory);
-        frame.add(customerInfo);
         frame.add(MainMenu);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
@@ -86,10 +79,6 @@ public class ManagerMenu implements ActionListener {
         else if (e.getSource() == inventory) {
             new InventoryFrame();
             frame.dispose();
-
-        }
-        else if (e.getSource() == customerInfo) {
-            Customer.customerInfo(LoginMenu.currentUsername);
 
         }
         else if (e.getSource() == MainMenu) {
