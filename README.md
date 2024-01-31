@@ -14,6 +14,9 @@
 
 [hands-on project phase 2_2.pdf](https://github.com/pouyanshams/OnlineShopProject/files/14100568/hands-on.project.phase.2_2.pdf)
 
+ فاز سوم و sequances diagram:
+ 
 
-
+[SequanceDiagramFinal1.pdf](https://github.com/pouyanshams/OnlineShopProject/files/14110973/SequanceDiagramFinal1.pdf)
+[SequanceDiagramFinal2.pdf](https://github.com/pouyanshams/OnlineShopProject/files/14110974/SequanceDiagramFinal2.pdf)
 
